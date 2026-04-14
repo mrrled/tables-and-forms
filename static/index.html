@@ -8,7 +8,51 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-    <form action="/pets/orders" method="POST">
+    <form class="form" action="/pets/orders" method="POST">
+        <label>Тип питомца:
+        <select name="petType" required>
+            <option value="">Выберите...</option>
+            <option value="cat">Кот</option>
+            <option value="dog">Собака</option>
+            <option value="bird">Птица</option>
+        </select>
+        </label>
+
+        <label>Пол:
+            <input type="radio" name="gender" value="boy" required> мужик
+            <input type="radio" name="gender" value="girl" required> дама
+            <input type="radio" name="gender" value="none" required> другое
+        </label>
+
+        <label>Цвет глаз:
+            <input type="color" name="eyeColor" required>
+        </label>
+
+        <label>Длина хвоста (см):
+            <input type="number" name="tailLength">
+        </label>
+
+        <label>Имя питомца:
+            <input type="text" name="name" required minlength="3" maxlength="50">
+        </label>
+
+        <label>Дата рождения:
+            <input type="date" name="dateOfBirth" required>
+        </label>
+
+        <label>Email:
+            <input type="email" name="email" required>
+        </label>
+
+        <label>Телефон:
+            <input type="tel" name="phone" required>
+        </label>
+
+        <label>
+            <input type="checkbox" name="rules" value="true" required>
+            Я согласен с правилами
+        </label>
+
         <button type="submit">Завести питомца</button>
     </form>
 
