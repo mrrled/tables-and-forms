@@ -19,9 +19,15 @@
         </label>
 
         <label>Пол:
-            <input type="radio" name="gender" value="boy" required> господин
-            <input type="radio" name="gender" value="girl" required> госпожа
-            <input type="radio" name="gender" value="none" required> другое
+           <label>
+               <input type="radio" name="gender" value="boy" required>господин
+           </label>
+            <label>
+                <input type="radio" name="gender" value="girl" required>госпожа
+            </label>
+            <label>
+                <input type="radio" name="gender" value="none" required>другое
+            </label>
         </label>
 
         <label>Цвет глаз:
@@ -29,7 +35,7 @@
         </label>
 
         <label>Длина хвоста (см):
-            <input type="number" name="tailLength">
+            <input type="number" name="tailLength" min="7" max="120" required>
         </label>
 
         <label>Имя хозяина:
@@ -41,11 +47,11 @@
         </label>
 
         <label>Email:
-            <input type="email" name="email" required>
+            <input type="email" name="email" placeholder="example@exampe.com" required>
         </label>
 
         <label>Телефон:
-            <input type="tel" name="phone" required>
+            <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
         </label>
 
         <label>
